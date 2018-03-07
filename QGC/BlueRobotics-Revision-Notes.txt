@@ -1,0 +1,95 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~  v3.2.4-BlueRobotics-Rev4   ~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~       22 January 2018       ~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Changes since Rev3:
+
+- Bugfix joystick handling with multiple vehicles connected
+- Autoconnect to independent udp port 14400 for Water Linked system
+- Allow popping out PiP into separate window to throw on separate monitor
+- Remove some unsupported mission commands
+- Add USB NMEA GPS support for showing GCS position
+- Add gstreamer debug logging
+- Fix video codec compliance - remove broken frames at beginning of file, and files will play in most if not all players now
+- Listen for audio stream on udp port 5601, no audio recording yet
+- Update ArduSub parameter metadata for ArduSub v3.5.2
+- Bugfix heading truncated to 0~180 degrees for Water Linked vehicle
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~  v3.2.4-BlueRobotics-Rev3   ~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~       13 November 2017      ~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Changes since Rev2:
+
+- Remove advanced 'joystick mode' settings
+- Add new Fact with current consumption in Watts to vehicle values widget
+- Bugfix disappearing record button
+- Bugfix extra empty tabs in instrument widget
+- Hide plan view when showAdvancedOptions app setting is false
+- Bugfix current monitor pin selection indexModel in APM power setup
+- Add ArduSub 3.5.2 default params for BlueROV2
+- Update new lights step parameter setup for ArduSub
+- Add time and date facts to vehicle values widget
+- Use appsettings setting for camera setup advanced settings visibility
+- Add mount tilt speed slider to camera setup
+- Add temperature units setting
+- Bugfix gear thingy for vehicle values selection in QGCInstrumentWidgetAlternate
+- Use wordwrap on vehicle values
+- Fix instrument widget width issues for 4k screens
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~  v3.2.4-BlueRobotics-Rev2   ~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~      26 September 2017      ~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Changes since Rev1:
+
+- Bugfix for Video Stream Source default to UDP
+- Bugfix for joystick TX mode initialization
+- Update joystick mapping database (specifically for XBox One on Mac OSX)
+- Make Sub vehicle-specific fact metadata for vehicle values widget (display 'depth' instead of 'altitude')
+- Remove auto-delete videos 'feature'
+- Clarify temperature fact metadata for Sub ('Internal Temp.' instead of 'Temperature (1)')
+- Better default vehicle values widget settings for Sub operation
+- Change PiP +/- resize buttons to a click and drag mechanism
+- Make video window the main fly view by default
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~  v3.2.4-BlueRobotics-Rev1   ~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~      12 September 2017      ~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Changes from upstream (mavlink) stable release v3.2.4:
+
+- Remove video recording button when dependencies for video recording are not met
+- Flash recording button while recording is in process
+- Add gps coordinates to vehicle telemetry values display
+- Limit the number of joystick buttons to display to 16
+- Support for multiple joysticks with the same name (for xbox360 wireless receiver)
+- Bugfix for crashes on active joystick change
+- Fix missing altitude updates for APM vehicles
+- Don't switch vehicle telemetry view automatically on sensor health warnings
+- Add GPS-enabled sub modes to the mode selection toolbar indicator
+- Fix disabling of restricted setup pages when vehicle is armed
+- Remove camera trigger and vibration pages from vehicle telemetry display for Sub vehicles
+- Remove WiFi warning on sensor calibration page for Sub vehicles
+- Update APM Sub mock link parameters to 3.5.0
+- Hide the record button when the video window is minimized and hidden
+- Update parameter metadata for ArduSub version 3.5.1
+- Add ROV image to the flightmap for Sub vehicles
+- Remove erroneous note about geofence from the Safety Setup page
+- Simplify Camera Setup page
+- Add input hold indicator to vehicle telemetry values display
+- Add minimum arming voltage setting to Power Setup page
+- Add rangefinder distance indicator to vehicle telemetry values display
+- Only allow vehicles identifying with sysid = 1 to be selected as the active vehicle (workaround for Waterlinked Support)
+- Automated continuous integration and deployments
+- Add 'Show advanced settings' option to the General Settings page
+- Add Tuning Setup page for Sub vehicles (show advanced settings/app restart required)
+- Add buttons to grow/shrink the size of the PiP window
+- Add the option to select custom brand image to display in upper-right corner of the UI
+- Increase the maximum map zoom level from 20 to 23
+- Remove second queue element downstream from avdec_h264 element in video streaming pipeline (attempt to improve video performance on Windows machines)
+- Make UDP video stream the default video stream source option
